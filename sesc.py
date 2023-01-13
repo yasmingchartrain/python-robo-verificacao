@@ -20,8 +20,8 @@ def sanitize(url):
 
 class SescSpider(scrapy.Spider):
     name = 'sesc'
-    allowed_domains = ['sesc.seatecnologia.com.br']
-    start_urls = ['https://sesc.seatecnologia.com.br/']
+    allowed_domains = ['exemplo.com.br']
+    start_urls = ['https:/exemplo.com.br/']
 
 
     user_agent = 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 ' \
@@ -31,7 +31,7 @@ class SescSpider(scrapy.Spider):
         url_erro = []
         links = response.css('a::attr(href)').getall()
         for url in links:
-            if 'sescdf.com.br' in url:
+            if 'exemplo2.com.br' in url:
                 url_erro.append(url)
 
         yield {
